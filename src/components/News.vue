@@ -91,7 +91,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import axios from 'axios'
 import { Calendar, ArrowRight } from 'lucide-vue-next'
 
 interface NewsItem {

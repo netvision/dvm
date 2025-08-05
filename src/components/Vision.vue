@@ -1,14 +1,14 @@
 <template>
-  <section class="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+  <section class="py-12 bg-white rounded-2xl shadow-lg border border-gray-200 mb-8 relative overflow-hidden">
     <!-- Background decorative elements -->
     <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-blue-200/30 to-purple-200/30 blur-3xl"></div>
-      <div class="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-gradient-to-tr from-yellow-200/30 to-orange-200/30 blur-3xl"></div>
+      <div class="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-gradient-to-br from-blue-200/20 to-purple-200/20 blur-3xl"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-gradient-to-tr from-yellow-200/20 to-orange-200/20 blur-3xl"></div>
     </div>
 
     <div class="container mx-auto px-4 relative">
       <!-- Section Header -->
-      <div class="text-center mb-16">
+      <div class="text-center mb-12">
         <div class="inline-block px-6 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold tracking-wide uppercase mb-4">
           Our Vision
         </div>
@@ -16,9 +16,9 @@
       </div>
 
       <!-- Main Vision Content -->
-      <div class="max-w-4xl mx-auto">
+      <div class="max-w-full mx-auto">
         <!-- Integrated Core Section -->
-        <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-white/50 mb-12 text-center">
+        <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-xl border border-white/50 mb-8 text-center">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             From Higher Standard of Living to 
             <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -62,9 +62,37 @@
           </router-link>
         </div>
 
+        <!-- Mission Section -->
+        <div class="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-6 md:p-8 text-white shadow-xl mb-8 text-center">
+          <div class="flex items-center justify-center mb-6">
+            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+              <BookOpenIcon :size="28" class="text-white" />
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold">Our Sacred Mission</h2>
+          </div>
+          
+          <blockquote class="text-xl md:text-2xl font-medium italic text-orange-100 mb-6">
+            "सत्त्वसंशुद्धिर्ज्ञानयोगव्यवस्थितिः"
+          </blockquote>
+          
+          <p class="text-lg mb-8 leading-relaxed">
+            Inspired by the divine qualities of Bhagavad Gita, we cultivate 
+            <strong class="text-yellow-200">fearlessness, truthfulness, compassion, and wisdom</strong> 
+            in every student—transforming education into character formation.
+          </p>
+
+          <router-link 
+            to="/mission"
+            class="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 no-underline"
+          >
+            <span>Discover Our Sacred Mission</span>
+            <ArrowRight :size="20" class="ml-3" />
+          </router-link>
+        </div>
+
         <!-- Foundation Articles -->
-        <div class="mb-12">
-          <div class="text-center mb-8">
+        <div class="mb-8">
+          <div class="text-center mb-6">
             <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               Foundation 
               <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -193,7 +221,8 @@ import {
   ArrowRight,
   Lightbulb,
   Palette as PaletteIcon,
-  Trophy as TrophyIcon
+  Trophy as TrophyIcon,
+  BookOpen as BookOpenIcon
 } from 'lucide-vue-next'
 </script>
 
@@ -212,5 +241,8 @@ import {
 }
 
 /* Custom font for Sanskrit */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+.font-devanagari {
+  font-family: 'Noto Sans Devanagari', 'Devanagari MT', 'Kohinoor Devanagari', sans-serif;
+  font-weight: 500;
+}
 </style>

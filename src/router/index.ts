@@ -91,6 +91,11 @@ const routes = [
     path: '/vision',
     name: 'Vision',
     component: () => import('../views/Vision.vue')
+  },
+  {
+    path: '/mission',
+    name: 'Mission',
+    component: () => import('../views/Mission.vue')
   }
 ]
 

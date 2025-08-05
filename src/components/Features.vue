@@ -1,12 +1,12 @@
 <template>
-  <section class="py-20 bg-white relative">
+  <section class="py-12 bg-white rounded-2xl shadow-lg border border-gray-200 relative">
     <!-- Subtle background pattern -->
     <div class="absolute inset-0 opacity-5">
       <div class="h-full w-full" style="background-image: radial-gradient(circle at 2px 2px, #3B82F6 1px, transparent 0); background-size: 40px 40px;"></div>
     </div>
 
     <div class="container mx-auto px-4 relative">
-      <div class="text-center mb-16">
+      <div class="text-center mb-12">
         <div class="inline-block px-6 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold tracking-wide uppercase mb-4">
           Why Choose DVM
         </div>

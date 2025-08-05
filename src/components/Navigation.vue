@@ -11,13 +11,13 @@
             </div>
             <div class="flex items-center">
               <Mail :size="14" class="mr-1" />
-              <span>info@davmchirawa.ac.in</span>
+              <span>info@dvmchirawa.ac.in</span>
             </div>
           </div>
           <div class="flex items-center space-x-4">
             <div class="flex items-center">
               <MapPin :size="14" class="mr-1" />
-              <span>School Address, City - 123456</span>
+              <span>Station Road, Chirawa - 333026, Rajasthan</span>
             </div>
           </div>
         </div>

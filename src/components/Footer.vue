@@ -28,7 +28,7 @@
           <div class="text-blue-100 space-y-2 text-sm">
             <div class="flex items-start">
               <span class="mr-2">📍</span>
-              <span>School Address, City, State - 123456</span>
+              <span>Station Road, Chirawa - 333026, Rajasthan</span>
             </div>
             <div class="flex items-center">
               <span class="mr-2">📞</span>
@@ -36,7 +36,7 @@
             </div>
             <div class="flex items-center">
               <span class="mr-2">✉️</span>
-              <span>info@davmchirawa.ac.in</span>
+              <span>info@dvmchirawa.ac.in</span>
             </div>
           </div>
         </div>

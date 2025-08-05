@@ -1,41 +1,41 @@
 <template>
-  <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+  <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
     <!-- Header -->
-    <div class="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-4 border-b-4 border-blue-700">
+    <div class="bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-3 border-b-2 border-blue-700">
       <div class="flex items-center justify-between">
-        <h3 class="text-lg font-bold text-white flex items-center">
-          <Newspaper :size="20" class="mr-2" />
+        <h3 class="text-base font-bold text-white flex items-center">
+          <Newspaper :size="16" class="mr-2" />
           Latest News
         </h3>
         <router-link 
           to="/news"
-          class="text-blue-100 hover:text-white transition-colors text-sm font-medium no-underline flex items-center"
+          class="text-blue-100 hover:text-white transition-colors text-xs font-medium no-underline flex items-center"
         >
           <span>View All</span>
-          <ChevronRight :size="16" class="ml-1" />
+          <ChevronRight :size="14" class="ml-1" />
         </router-link>
       </div>
     </div>
 
     <!-- News Items -->
-    <div class="divide-y divide-gray-100 max-h-96 overflow-y-auto">
+    <div class="divide-y divide-gray-100 max-h-80 overflow-y-auto">
       <article 
         v-for="(article, index) in latestNews" 
         :key="index"
-        class="p-4 hover:bg-blue-50 transition-colors duration-200 cursor-pointer group border-l-4 border-transparent hover:border-blue-500"
+        class="p-3 hover:bg-blue-50 transition-colors duration-200 cursor-pointer group border-l-3 border-transparent hover:border-blue-500"
       >
-        <div class="flex items-start space-x-3">
+        <div class="flex items-start space-x-2">
           <div class="flex-shrink-0">
-            <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center shadow-md">
-              <Calendar :size="16" class="text-white" />
+            <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center shadow-sm">
+              <Calendar :size="12" class="text-white" />
             </div>
           </div>
           
           <div class="flex-1 min-w-0">
-            <h4 class="text-sm font-semibold text-gray-900 group-hover:text-blue-700 transition-colors line-clamp-2 mb-1">
+            <h4 class="text-xs font-semibold text-gray-900 group-hover:text-blue-700 transition-colors line-clamp-2 mb-1">
               {{ article.title }}
             </h4>
-            <p class="text-xs text-gray-600 mb-2 line-clamp-2">
+            <p class="text-xs text-gray-600 mb-1 line-clamp-1">
               {{ article.excerpt }}
             </p>
             <div class="flex items-center justify-between">

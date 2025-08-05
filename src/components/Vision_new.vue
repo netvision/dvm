@@ -8,7 +8,14 @@
     </div>
 
     <div class="container mx-auto px-4 relative overflow-hidden">
-      
+      <!-- Section Header -->
+      <div class="text-center mb-8">
+        <div class="inline-block px-4 py-1.5 bg-blue-100 text-blue-800 rounded-full text-xs font-semibold tracking-wide uppercase mb-3">
+          Our Vision
+        </div>
+        <div class="w-20 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+      </div>
+
       <!-- Main Vision Content -->
       <div class="max-w-full mx-auto overflow-hidden">
         <!-- Integrated Core Section -->
@@ -83,21 +90,31 @@
             <ArrowRight :size="20" class="ml-3" />
           </router-link>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Articles Grid -->
-        <div class="mt-8">
-          <div class="text-center mb-8">
-            <div class="relative">
-              <div class="absolute inset-0 flex items-center">
-                <div class="w-full border-t border-gray-200"></div>
-              </div>
-              <div class="relative flex justify-center">
-                <span class="bg-white px-6 py-2 text-lg font-medium text-gray-500 italic">
-                  Explore our educational foundations that shape student growth
-                </span>
-              </div>
-            </div>
-          </div>
+  <!-- Foundational Articles Section -->
+  <section class="py-8 bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl shadow-md border border-gray-200 overflow-hidden">
+    <div class="container mx-auto px-4 relative">
+      <!-- Section Header -->
+      <div class="text-center mb-8">
+        <div class="inline-block px-4 py-1.5 bg-purple-100 text-purple-800 rounded-full text-xs font-semibold tracking-wide uppercase mb-3">
+          Educational Foundation
+        </div>
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+          Foundational 
+          <span class="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            Articles
+          </span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Discover the core principles that guide our educational approach and philosophy
+        </p>
+        <div class="w-20 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- Articles Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 overflow-hidden px-1">
         <!-- Article 1: Standard of Life -->
         <router-link 
@@ -199,8 +216,6 @@
           </div>
         </router-link>
       </div>
-        </div>
-      </div>
     </div>
   </section>
 </template>
@@ -237,7 +252,6 @@ import {
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -245,7 +259,6 @@ import {
 .line-clamp-1 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
-  line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

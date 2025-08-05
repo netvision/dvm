@@ -4,24 +4,26 @@
     
     <!-- Main Content with Sidebar Layout -->
     <div class="bg-gray-50 min-h-screen">
-      <div class="container mx-auto px-4 py-8">
-        <div class="grid lg:grid-cols-4 gap-8">
+      <div class="container mx-auto px-4 py-6">
+        <div class="grid lg:grid-cols-4 gap-6 overflow-hidden">
           <!-- Main Content Area -->
-          <div class="lg:col-span-3">
-            <Vision />
-            <Features />
+          <div class="lg:col-span-3 overflow-hidden">
+            <div class="space-y-6">
+              <Vision />
+              <Features />
+            </div>
           </div>
           
           <!-- Sidebar -->
           <div class="lg:col-span-1">
-            <div class="sticky top-8 space-y-6">
+            <div class="sticky top-6 space-y-4">
               <!-- Sidebar Header -->
-              <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
-                <h2 class="text-xl font-bold text-gray-900 mb-2 flex items-center">
-                  <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+              <div class="bg-white rounded-xl shadow-md border border-gray-200 p-4">
+                <h2 class="text-lg font-bold text-gray-900 mb-1 flex items-center">
+                  <div class="w-2.5 h-2.5 bg-blue-500 rounded-full mr-2"></div>
                   Latest Updates
                 </h2>
-                <p class="text-gray-600 text-sm">Stay informed with our latest news and upcoming events</p>
+                <p class="text-gray-600 text-xs">Stay informed with our latest news and upcoming events</p>
               </div>
               
               <NewsSidebar />

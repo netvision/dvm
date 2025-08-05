@@ -16,66 +16,66 @@
       </div>
 
       <!-- Main Vision Content -->
-      <div class="max-w-5xl mx-auto">
-        <!-- Core Philosophy -->
-        <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-white/50 mb-12">
-          <div class="text-center mb-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              From Higher Standard of Living to 
-              <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Higher Standard of Life
-              </span>
-            </h2>
-          </div>
+      <div class="max-w-4xl mx-auto">
+        <!-- Integrated Core Section -->
+        <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-white/50 mb-12 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            From Higher Standard of Living to 
+            <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Higher Standard of Life
+            </span>
+          </h2>
           
-          <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
-            <p class="text-xl text-center italic text-gray-600 mb-8">
-              "At the heart of our educational philosophy lies a transformative journey..."
-            </p>
-            
-            <p>
-              We believe that true education empowers students not merely to adapt to their circumstances, 
-              but to <strong class="text-blue-600">rise above them with clarity, resilience, and purpose</strong>. 
-              We envision a school where learning transcends information, evolving into deep conceptual 
-              understanding and articulate expression.
-            </p>
-            
-            <p>
-              Our students are not passive recipients of content but <strong class="text-purple-600">active creators of meaning</strong>—capable 
-              of connecting ideas, expressing insights, and applying knowledge with confidence and creativity.
-            </p>
-          </div>
-        </div>
+          <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+            We believe true education empowers students to <strong class="text-blue-600">rise above their circumstances</strong> 
+            with clarity, resilience, and purpose—transforming them into <strong class="text-purple-600">active creators of meaning</strong>.
+          </p>
 
-        <!-- Three Pillars -->
-        <div class="grid md:grid-cols-3 gap-6 mb-12">
-          <div class="text-center bg-white/70 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/50">
-            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <GraduationCap :size="28" class="text-white" />
+          <!-- Three Core Values in One Row -->
+          <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <div class="flex flex-col items-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mb-3">
+                <GraduationCap :size="24" class="text-white" />
+              </div>
+              <h4 class="font-bold text-gray-800 text-sm">Academic Excellence</h4>
             </div>
-            <h4 class="text-lg font-bold text-gray-800 mb-2">Academic Excellence</h4>
-            <p class="text-gray-600 text-sm">Deep conceptual understanding and critical thinking</p>
+            <div class="flex flex-col items-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-3">
+                <Music :size="24" class="text-white" />
+              </div>
+              <h4 class="font-bold text-gray-800 text-sm">Artistic Expression</h4>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mb-3">
+                <Zap :size="24" class="text-white" />
+              </div>
+              <h4 class="font-bold text-gray-800 text-sm">Athletic Achievement</h4>
+            </div>
           </div>
 
-          <div class="text-center bg-white/70 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/50">
-            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Music :size="28" class="text-white" />
-            </div>
-            <h4 class="text-lg font-bold text-gray-800 mb-2">Artistic Expression</h4>
-            <p class="text-gray-600 text-sm">Literature, music, and arts for holistic development</p>
-          </div>
-
-          <div class="text-center bg-white/70 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/50">
-            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Zap :size="28" class="text-white" />
-            </div>
-            <h4 class="text-lg font-bold text-gray-800 mb-2">Athletic Achievement</h4>
-            <p class="text-gray-600 text-sm">Physical excellence and competitive spirit</p>
-          </div>
+          <router-link 
+            to="/vision"
+            class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 no-underline"
+          >
+            <span>Explore Our Complete Vision</span>
+            <ArrowRight :size="20" class="ml-3" />
+          </router-link>
         </div>
 
         <!-- Foundation Articles -->
         <div class="mb-12">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Foundation 
+              <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Articles
+              </span>
+            </h3>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              Discover the core principles that guide our educational approach
+            </p>
+          </div>
+
           <!-- Articles Grid -->
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Article 1: Standard of Life -->
@@ -179,29 +179,6 @@
             </router-link>
           </div>
         </div>
-
-        <!-- Closing Statement -->
-        <div class="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white shadow-2xl">
-          <h3 class="text-2xl md:text-3xl font-bold mb-6">A Sanctuary of Balance</h3>
-          <p class="text-lg md:text-xl leading-relaxed mb-6">
-            Our school is a sanctuary of balance, where <strong>intellect meets imagination</strong>, 
-            and <strong>ambition meets compassion</strong>. We prepare students not just for exams, but for life.
-          </p>
-          <div class="flex justify-center space-x-8 text-blue-100">
-            <div class="text-center">
-              <Heart :size="32" class="mx-auto mb-2" />
-              <span class="text-sm font-medium">Compassion</span>
-            </div>
-            <div class="text-center">
-              <Lightbulb :size="32" class="mx-auto mb-2" />
-              <span class="text-sm font-medium">Innovation</span>
-            </div>
-            <div class="text-center">
-              <Target :size="32" class="mx-auto mb-2" />
-              <span class="text-sm font-medium">Purpose</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -211,12 +188,10 @@
 import { 
   GraduationCap, 
   Music, 
-  Zap, 
-  Heart, 
-  Lightbulb, 
-  Target,
+  Zap,
   TrendingUp,
   ArrowRight,
+  Lightbulb,
   Palette as PaletteIcon,
   Trophy as TrophyIcon
 } from 'lucide-vue-next'

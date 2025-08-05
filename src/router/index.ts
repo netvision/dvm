@@ -86,6 +86,11 @@ const routes = [
     path: '/annual-report',
     name: 'AnnualReport',
     component: () => import('../views/AnnualReport.vue')
+  },
+  {
+    path: '/vision',
+    name: 'Vision',
+    component: () => import('../views/Vision.vue')
   }
 ]
 

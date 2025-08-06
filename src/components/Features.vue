@@ -52,7 +52,7 @@
         <div class="group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-100 max-w-full overflow-hidden">
           <div class="w-full h-32 overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
             <img 
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300&h=200&fit=crop&crop=center" 
+              src="/images/avroom.jpg" 
               alt="AV Room Excellence" 
               class="w-full h-full object-cover"
             />

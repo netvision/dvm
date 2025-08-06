@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white shadow-lg">
+  <header class="bg-white shadow-lg relative z-50 overflow-visible">
     <!-- Top Header with Contact Info -->
     <div class="bg-blue-900 text-white py-2">
       <div class="container mx-auto px-4">
@@ -25,11 +25,11 @@
     </div>
 
     <!-- Main Header -->
-    <div class="bg-white border-b border-gray-100">
-      <div class="container mx-auto px-4">
-        <div class="flex items-center justify-between h-20">
+    <div class="bg-white border-b border-gray-100 overflow-visible">
+      <div class="container mx-auto px-4 overflow-visible">
+        <div class="flex items-center justify-between h-20 overflow-visible">
           <!-- Logo Section -->
-          <div class="flex items-center space-x-4">
+          <router-link to="/" class="flex items-center space-x-4 hover:opacity-80 transition-opacity duration-200">
             <div class="w-20 h-20 flex items-center justify-center">
               <img 
                 src="/images/dvm-logo-white.png" 
@@ -43,10 +43,10 @@
                 ✨ From Living Standards to Life Standards ✨
               </p>
             </div>
-          </div>
+          </router-link>
 
           <!-- Desktop Navigation -->
-          <nav class="hidden lg:flex items-center space-x-6">
+          <nav class="hidden lg:flex items-center space-x-6 overflow-visible">
             <router-link 
               to="/" 
               class="nav-link"
@@ -320,6 +320,15 @@ const closeMobileMenu = () => {
 </script>
 
 <style scoped>
+/* Remove underlines from all links */
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
 .nav-link {
   display: flex;
   align-items: center;
@@ -328,15 +337,18 @@ const closeMobileMenu = () => {
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
   transition: color 0.2s, background-color 0.2s;
+  text-decoration: none !important;
 }
 
 .nav-link:hover {
   color: #2563eb;
+  text-decoration: none !important;
 }
 
 .nav-link-active {
   color: #2563eb !important;
   background-color: #eff6ff;
+  text-decoration: none !important;
 }
 
 /* Dropdown Container */
@@ -354,7 +366,8 @@ const closeMobileMenu = () => {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   margin-top: 0.5rem;
   width: 12rem; /* w-48 equivalent */
   background: white;
@@ -362,12 +375,30 @@ const closeMobileMenu = () => {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   border: 1px solid #e5e7eb;
   padding: 0.5rem 0;
-  z-index: 50;
+  z-index: 100;
   overflow: hidden;
 }
 
 .dropdown-menu.w-56 {
   width: 14rem; /* w-56 equivalent */
+}
+
+/* Right-align dropdown for items near the right edge */
+.dropdown-container:nth-last-child(-n+2) .dropdown-menu {
+  left: auto;
+  right: 0;
+  transform: none;
+}
+
+/* Ensure dropdowns don't cause horizontal scroll */
+.dropdown-container {
+  position: static;
+}
+
+@media (min-width: 1024px) {
+  .dropdown-container {
+    position: relative;
+  }
 }
 
 .dropdown-link {
@@ -377,7 +408,7 @@ const closeMobileMenu = () => {
   font-weight: 500;
   padding: 0.75rem 1rem;
   transition: all 0.15s ease-in-out;
-  text-decoration: none;
+  text-decoration: none !important;
   border-radius: 0;
 }
 
@@ -385,10 +416,12 @@ const closeMobileMenu = () => {
   color: #2563eb;
   background-color: #f8fafc;
   transform: translateX(4px);
+  text-decoration: none !important;
 }
 
 .dropdown-link:active {
   background-color: #e2e8f0;
+  text-decoration: none !important;
 }
 
 /* Dropdown Animations */
@@ -422,16 +455,19 @@ const closeMobileMenu = () => {
   padding: 0.75rem;
   border-radius: 0.5rem;
   transition: color 0.2s, background-color 0.2s;
+  text-decoration: none !important;
 }
 
 .mobile-nav-link:hover {
   color: #2563eb;
   background-color: #f9fafb;
+  text-decoration: none !important;
 }
 
 .mobile-nav-link-active {
   color: #2563eb !important;
   background-color: #eff6ff;
+  text-decoration: none !important;
 }
 
 /* Chevron rotation animation */

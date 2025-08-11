@@ -96,6 +96,36 @@ const routes = [
     path: '/mission',
     name: 'Mission',
     component: () => import('../views/Mission.vue')
+  },
+  {
+    path: '/syllabus-breakup',
+    name: 'SyllabusBreakup',
+    component: () => import('../views/SyllabusBreakup.vue')
+  },
+  {
+    path: '/book-list',
+    name: 'BookList',
+    component: () => import('../views/BookList.vue')
+  },
+  {
+    path: '/staff',
+    name: 'Staff',
+    component: () => import('../views/Staff.vue')
+  },
+  {
+    path: '/fee-structure',
+    name: 'FeeStructure',
+    component: () => import('../views/FeeStructure.vue')
+  },
+  {
+    path: '/student-strength',
+    name: 'StudentStrength',
+    component: () => import('../views/StudentStrength.vue')
+  },
+  {
+    path: '/smc',
+    name: 'SMC',
+    component: () => import('../views/SMC.vue')
   }
 ]
 

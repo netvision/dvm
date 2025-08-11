@@ -77,6 +77,14 @@
                     <BookOpen :size="16" class="mr-2" />
                     Curriculum
                   </router-link>
+                  <router-link to="/syllabus-breakup" class="dropdown-link" @click="showAcademicsDropdown = false">
+                    <FileText :size="16" class="mr-2" />
+                    Syllabus Breakup
+                  </router-link>
+                  <router-link to="/book-list" class="dropdown-link" @click="showAcademicsDropdown = false">
+                    <BookOpen :size="16" class="mr-2" />
+                    Book List 2025-26
+                  </router-link>
                   <router-link to="/admissions" class="dropdown-link" @click="showAcademicsDropdown = false">
                     <Users :size="16" class="mr-2" />
                     Admissions
@@ -130,6 +138,22 @@
                   <router-link to="/mandatory-disclosure" class="dropdown-link" @click="showMandatoryDropdown = false">
                     <Info :size="16" class="mr-2" />
                     School Information
+                  </router-link>
+                  <router-link to="/staff" class="dropdown-link" @click="showMandatoryDropdown = false">
+                    <Users :size="16" class="mr-2" />
+                    Staff Details
+                  </router-link>
+                  <router-link to="/fee-structure" class="dropdown-link" @click="showMandatoryDropdown = false">
+                    <DollarSign :size="16" class="mr-2" />
+                    Fee Structure
+                  </router-link>
+                  <router-link to="/student-strength" class="dropdown-link" @click="showMandatoryDropdown = false">
+                    <TrendingUp :size="16" class="mr-2" />
+                    Student Strength
+                  </router-link>
+                  <router-link to="/smc" class="dropdown-link" @click="showMandatoryDropdown = false">
+                    <UserCheck :size="16" class="mr-2" />
+                    School Management Committee
                   </router-link>
                   <router-link to="/annual-report" class="dropdown-link" @click="showMandatoryDropdown = false">
                     <BarChart3 :size="16" class="mr-2" />
@@ -269,6 +293,24 @@
             Grievance Redressal
           </router-link>
           <router-link 
+            to="/student-strength" 
+            class="mobile-nav-link"
+            active-class="mobile-nav-link-active"
+            @click="closeMobileMenu"
+          >
+            <TrendingUp :size="18" class="mr-2" />
+            Student Strength
+          </router-link>
+          <router-link 
+            to="/smc" 
+            class="mobile-nav-link"
+            active-class="mobile-nav-link-active"
+            @click="closeMobileMenu"
+          >
+            <UserCheck :size="18" class="mr-2" />
+            School Management Committee
+          </router-link>
+          <router-link 
             to="/contact" 
             class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-3 rounded-lg font-medium transition-colors text-center"
             @click="closeMobileMenu"
@@ -302,7 +344,10 @@ import {
   BarChart3,
   Shield,
   Award,
-  Image
+  Image,
+  DollarSign,
+  TrendingUp,
+  UserCheck
 } from 'lucide-vue-next'
 
 const isMobileMenuOpen = ref(false)

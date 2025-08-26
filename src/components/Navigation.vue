@@ -163,14 +163,14 @@
                     <MessageSquare :size="16" class="mr-2" />
                     Grievance Redressal
                   </router-link>
-                  <a href="#" class="dropdown-link">
+                  <router-link to="/mandatory-disclosure#documents" class="dropdown-link" @click="showMandatoryDropdown = false">
                     <Shield :size="16" class="mr-2" />
                     Safety Certificates
-                  </a>
-                  <a href="#" class="dropdown-link">
+                  </router-link>
+                  <router-link to="/mandatory-disclosure#cbse-affiliation" class="dropdown-link" @click="showMandatoryDropdown = false">
                     <Award :size="16" class="mr-2" />
                     CBSE Affiliation
-                  </a>
+                  </router-link>
                 </div>
               </transition>
             </div>

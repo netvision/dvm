@@ -74,39 +74,49 @@
         </div>
       </div>
 
-      <!-- Documents -->
-      <div class="mb-16">
+    <!-- Documents -->
+    <div id="documents" class="mb-16">
         <h2 class="text-3xl font-bold text-blue-900 mb-8 text-center">Mandatory Documents</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-lg shadow-md">
+      <div id="cbse-affiliation" class="bg-white p-6 rounded-lg shadow-md">
             <h4 class="text-lg font-semibold text-blue-900 mb-3">📄 CBSE Affiliation Certificate</h4>
             <p class="text-gray-600 text-sm mb-4">Certificate of Affiliation issued by CBSE</p>
-            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm">Download PDF</a>
+            <a href="/pdfs/cbse_affiliation.pdf" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm">Open PDF</a>
+            <div class="mt-4 border rounded overflow-hidden">
+              <iframe src="/pdfs/cbse_affiliation.pdf" class="w-full h-40" />
+            </div>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md">
             <h4 class="text-lg font-semibold text-blue-900 mb-3">🏗️ Building Safety Certificate</h4>
             <p class="text-gray-600 text-sm mb-4">Fire Safety & Building Safety Certificates</p>
-            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm">Download PDF</a>
+            <a href="/pdfs/building_safety.pdf" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm">Open PDF</a>
+            <div class="mt-4 border rounded overflow-hidden">
+              <iframe src="/pdfs/building_safety.pdf" class="w-full h-40" />
+            </div>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md">
             <h4 class="text-lg font-semibold text-blue-900 mb-3">💧 Water & Health Certificates</h4>
             <p class="text-gray-600 text-sm mb-4">Water Quality & Health Sanitation Certificates</p>
-            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm">Download PDF</a>
+            <a href="/pdfs/WATER_TESTING_CERTIFICATE_2025.pdf" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm">Open PDF</a>
+            <div class="mt-4 border rounded overflow-hidden">
+              <iframe src="/pdfs/WATER_TESTING_CERTIFICATE_2025.pdf" class="w-full h-40" />
+            </div>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md">
             <h4 class="text-lg font-semibold text-blue-900 mb-3">📋 DEO/State NOC</h4>
             <p class="text-gray-600 text-sm mb-4">No Objection Certificate from State Authorities</p>
-            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm">Download PDF</a>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-md">
-            <h4 class="text-lg font-semibold text-blue-900 mb-3">📊 Annual Report</h4>
-            <p class="text-gray-600 text-sm mb-4">Annual Report as per CBSE Guidelines</p>
-            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm">Download PDF</a>
+            <a href="/pdfs/noc.pdf" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm">Open PDF</a>
+            <div class="mt-4 border rounded overflow-hidden">
+              <iframe src="/pdfs/noc.pdf" class="w-full h-40" />
+            </div>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-md">
             <h4 class="text-lg font-semibold text-blue-900 mb-3">⚖️ Trust/Society Registration</h4>
             <p class="text-gray-600 text-sm mb-4">Trust/Society Registration Certificate</p>
-            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm">Download PDF</a>
+            <a href="/pdfs/Society-Registration.pdf" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm">Open PDF</a>
+            <div class="mt-4 border rounded overflow-hidden">
+              <iframe src="/pdfs/Society-Registration.pdf" class="w-full h-40" />
+            </div>
           </div>
         </div>
       </div>

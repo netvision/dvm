@@ -25,49 +25,45 @@
               </div>
               <div class="flex justify-between border-b pb-2">
                 <span class="font-semibold text-gray-700">CBSE Affiliation No:</span>
-                <span class="text-gray-600">1234567</span>
+                <span class="text-gray-600">1730422</span>
               </div>
               <div class="flex justify-between border-b pb-2">
                 <span class="font-semibold text-gray-700">School Code:</span>
-                <span class="text-gray-600">12345</span>
+                <span class="text-gray-600">10765</span>
               </div>
               <div class="flex justify-between border-b pb-2">
                 <span class="font-semibold text-gray-700">Complete Address:</span>
-                <span class="text-gray-600">123, Education Lane, Knowledge City - 123456</span>
+                <span class="text-gray-600">STATION ROAD CHIRAWA, JHUNJHUNU, RAJASTHAN - 333026</span>
               </div>
               <div class="flex justify-between border-b pb-2">
                 <span class="font-semibold text-gray-700">Principal Name:</span>
-                <span class="text-gray-600">Dr. Rajesh Sharma</span>
+                <span class="text-gray-600">Mr. Shakti Singh</span>
               </div>
               <div class="flex justify-between border-b pb-2">
                 <span class="font-semibold text-gray-700">Principal Qualification:</span>
-                <span class="text-gray-600">M.Ed., Ph.D. in Education</span>
+                <span class="text-gray-600">M.A., B.Ed.</span>
               </div>
             </div>
             <div class="space-y-4">
               <div class="flex justify-between border-b pb-2">
                 <span class="font-semibold text-gray-700">School Email ID:</span>
-                <span class="text-gray-600">info@dalmiavidyamandir.edu.in</span>
+                <span class="text-gray-600">10765@cbsesiksha.in, info@dalmiavidyamandir.org.in</span>
               </div>
               <div class="flex justify-between border-b pb-2">
                 <span class="font-semibold text-gray-700">Contact Details:</span>
-                <span class="text-gray-600">+91-11-2345-6789</span>
-              </div>
-              <div class="flex justify-between border-b pb-2">
-                <span class="font-semibold text-gray-700">Year of Establishment:</span>
-                <span class="text-gray-600">1925</span>
+                <span class="text-gray-600">+91-1596-220602</span>
               </div>
               <div class="flex justify-between border-b pb-2">
                 <span class="font-semibold text-gray-700">Total Campus Area:</span>
-                <span class="text-gray-600">15 Acres</span>
+                <span class="text-gray-600">14500 Sq. Mtrs.</span>
               </div>
               <div class="flex justify-between border-b pb-2">
                 <span class="font-semibold text-gray-700">Total Number of Students:</span>
-                <span class="text-gray-600">2,500</span>
+                <span class="text-gray-600">949</span>
               </div>
               <div class="flex justify-between border-b pb-2">
                 <span class="font-semibold text-gray-700">Total Number of Teachers:</span>
-                <span class="text-gray-600">120</span>
+                <span class="text-gray-600">52</span>
               </div>
             </div>
           </div>
@@ -127,11 +123,11 @@
         <div class="bg-green-50 p-8 rounded-lg">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div class="text-3xl font-bold text-green-900 mb-2">120</div>
+              <div class="text-3xl font-bold text-green-900 mb-2">52</div>
               <div class="text-gray-700">Total Teaching Staff</div>
             </div>
             <div>
-              <div class="text-3xl font-bold text-green-900 mb-2">95%</div>
+              <div class="text-3xl font-bold text-green-900 mb-2">100%</div>
               <div class="text-gray-700">Trained Graduate Teachers</div>
             </div>
             <div>
@@ -151,7 +147,7 @@
             <div class="space-y-3">
               <div class="flex justify-between">
                 <span class="text-gray-700">Total Classrooms:</span>
-                <span class="font-semibold">60</span>
+                <span class="font-semibold">105</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-gray-700">Science Laboratories:</span>
@@ -287,12 +283,12 @@
           <div class="text-center">
             <div class="text-4xl mb-3">📞</div>
             <h4 class="text-lg font-semibold mb-2">Phone</h4>
-            <p class="text-sm text-blue-100">+91-11-2345-6789</p>
+            <p class="text-sm text-blue-100">+91-1596-220602</p>
           </div>
           <div class="text-center">
             <div class="text-4xl mb-3">📍</div>
             <h4 class="text-lg font-semibold mb-2">Address</h4>
-            <p class="text-sm text-blue-100">123, Education Lane, Knowledge City - 123456</p>
+            <p class="text-sm text-blue-100">STATION ROAD CHIRAWA, JHUNJHUNU, RAJASTHAN - 333026</p>
           </div>
         </div>
       </div>

@@ -73,18 +73,22 @@
                 <li>• High-speed internet connectivity</li>
                 <li>• Programming and robotics lab</li>
                 <li>• Multimedia editing suites</li>
-                <li>• 3D printing facility</li>
               </ul>
             </div>
           </div>
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=300&fit=crop" 
+              src="/images/building.jpg" 
               alt="Smart Classroom" 
               class="w-full h-64 object-cover rounded-lg shadow-lg mb-6"
             />
             <img 
-              src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=300&fit=crop" 
+              src="/images/labs.jpg" 
+              alt="Science Laboratory" 
+              class="w-full h-64 object-cover rounded-lg shadow-lg"
+            />
+            <img 
+              src="/images/computer.jpg" 
               alt="Science Laboratory" 
               class="w-full h-64 object-cover rounded-lg shadow-lg"
             />
@@ -97,7 +101,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop" 
+              src="/images/slide2.jpg" 
               alt="School Library" 
               class="w-full h-80 object-cover rounded-lg shadow-lg"
             />
@@ -146,7 +150,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="bg-red-50 p-6 rounded-lg text-center">
             <img 
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=300&fit=crop" 
+              src="/images/sports.jpg" 
               alt="Playground" 
               class="w-full h-48 object-cover rounded-lg mb-4"
             />
@@ -156,7 +160,6 @@
               <li>• Basketball & Volleyball Courts</li>
               <li>• Athletics Track (400m)</li>
               <li>• Badminton Courts</li>
-              <li>• Swimming Pool</li>
             </ul>
           </div>
           <div class="bg-blue-50 p-6 rounded-lg text-center">

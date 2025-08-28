@@ -252,12 +252,12 @@
         <div class="bg-gradient-to-r from-green-500 to-blue-600 text-white p-8 rounded-lg">
           <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div class="text-3xl font-bold mb-2">98.5%</div>
-              <div class="text-sm">Class X Pass Rate (2024)</div>
+              <div class="text-3xl font-bold mb-2">98.69%</div>
+              <div class="text-sm">Class X Pass Rate (2025)</div>
             </div>
             <div>
-              <div class="text-3xl font-bold mb-2">96.2%</div>
-              <div class="text-sm">Class XII Pass Rate (2024)</div>
+              <div class="text-3xl font-bold mb-2">92.85%</div>
+              <div class="text-sm">Class XII Pass Rate (2025)</div>
             </div>
             <div>
               <div class="text-3xl font-bold mb-2">85%</div>

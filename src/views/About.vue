@@ -34,18 +34,18 @@
                 <div class="text-sm text-gray-600">Years of Legacy</div>
               </div>
               <div>
-                <div class="text-3xl font-bold text-blue-900">5000+</div>
+                <div class="text-3xl font-bold text-blue-900">4000+</div>
                 <div class="text-sm text-gray-600">Alumni</div>
               </div>
               <div>
-                <div class="text-3xl font-bold text-blue-900">95%</div>
+                <div class="text-3xl font-bold text-blue-900">Above 90%</div>
                 <div class="text-sm text-gray-600">Board Results</div>
               </div>
             </div>
           </div>
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&h=400&fit=crop" 
+              src="/images/slide1.jpg" 
               alt="Dalmia Vidya Mandir School Building" 
               class="w-full h-96 object-cover rounded-lg shadow-lg"
             />
@@ -178,6 +178,7 @@
       <!-- Leadership Team -->
       <div class="mb-16">
         <h2 class="text-3xl font-bold text-blue-900 mb-8 text-center">Leadership Team</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="text-center">
             <img 
@@ -212,10 +213,11 @@
         </div>
       </div>
 
-      <!-- Awards & Recognition -->
+      <!-- Awards & Recognition 
       <div class="bg-gray-50 p-8 rounded-lg">
         <h2 class="text-3xl font-bold text-blue-900 mb-8 text-center">Awards & Recognition</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
           <div class="text-center">
             <div class="text-4xl mb-3">🏆</div>
             <h5 class="font-semibold text-blue-900 mb-2">Best CBSE School</h5>
@@ -236,8 +238,10 @@
             <h5 class="font-semibold text-blue-900 mb-2">Sports Excellence</h5>
             <p class="text-sm text-gray-600">Inter-School Championship</p>
           </div>
+          
         </div>
       </div>
+      -->
     </div>
   </div>
 </template>

@@ -123,28 +123,12 @@
                   <span class="text-blue-600 mr-2">✓</span>
                   <span>Income Certificate (for scholarship eligibility)</span>
                 </li>
-                <li class="flex items-start">
-                  <span class="text-blue-600 mr-2">✓</span>
-                  <span>Medical fitness certificate</span>
-                </li>
               </ul>
             </div>
           </div>
           <div>
             <h2 class="text-3xl font-bold text-blue-900 mb-6">Scholarship Programs</h2>
             <div class="space-y-4">
-              <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-                <h4 class="font-semibold text-green-800 mb-2">Merit Scholarship</h4>
-                <p class="text-green-700 text-sm">Up to 50% fee waiver for students scoring 95%+ in entrance test</p>
-              </div>
-              <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
-                <h4 class="font-semibold text-yellow-800 mb-2">Sports Excellence</h4>
-                <p class="text-yellow-700 text-sm">25% fee concession for state/national level athletes</p>
-              </div>
-              <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                <h4 class="font-semibold text-blue-800 mb-2">Sibling Discount</h4>
-                <p class="text-blue-700 text-sm">15% discount on fees for second child onwards</p>
-              </div>
               <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
                 <h4 class="font-semibold text-purple-800 mb-2">Need-based Support</h4>
                 <p class="text-purple-700 text-sm">Financial assistance for economically disadvantaged students</p>

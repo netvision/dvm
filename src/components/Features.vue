@@ -32,7 +32,7 @@
         <div class="group bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-amber-100 max-w-full overflow-hidden">
           <div class="w-full h-32 overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
             <img 
-              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=300&h=200&fit=crop&crop=center" 
+              src="/images/student1.jpg" 
               alt="100 Years Legacy" 
               class="w-full h-full object-cover"
             />
@@ -72,7 +72,7 @@
         <div class="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-purple-100 max-w-full overflow-hidden">
           <div class="w-full h-32 overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
             <img 
-              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=300&h=200&fit=crop&crop=center" 
+              src="/images/student2.jpg" 
               alt="Small Class Advantage" 
               class="w-full h-full object-cover"
             />
@@ -92,7 +92,7 @@
         <div class="group bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-green-100 max-w-full overflow-hidden">
           <div class="w-full h-32 overflow-hidden transform transition-transform duration-300 group-hover:scale-105">
             <img 
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&crop=center" 
+              src="/images/sports.jpg" 
               alt="Complete Development" 
               class="w-full h-full object-cover"
             />

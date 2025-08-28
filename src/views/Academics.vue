@@ -25,12 +25,9 @@
           <div class="flex justify-center items-center space-x-8">
             <div class="text-center">
               <div class="text-2xl font-bold text-blue-900">CBSE</div>
-              <div class="text-sm text-gray-600">Affiliation No: 1234567</div>
+              <div class="text-sm text-gray-600">Affiliation No: 1730422</div>
             </div>
-            <div class="text-center">
-              <div class="text-2xl font-bold text-blue-900">ISO</div>
-              <div class="text-sm text-gray-600">9001:2015 Certified</div>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -66,7 +63,7 @@
           </div>
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?w=600&h=300&fit=crop" 
+              src="/images/academics.jpg" 
               alt="Primary Students" 
               class="w-full h-64 object-cover rounded-lg shadow-lg mb-6"
             />
@@ -233,18 +230,9 @@
               alt="Examination Hall" 
               class="w-full h-64 object-cover rounded-lg shadow-lg mb-6"
             />
-            <div class="bg-blue-50 p-4 rounded-lg">
-              <h4 class="font-semibold text-blue-800 mb-3">Board Results 2024</h4>
-              <div class="grid grid-cols-2 gap-4 text-center">
-                <div>
-                  <div class="text-2xl font-bold text-blue-900">98.5%</div>
-                  <div class="text-sm text-gray-600">Class X Pass %</div>
-                </div>
-                <div>
-                  <div class="text-2xl font-bold text-blue-900">96.2%</div>
-                  <div class="text-sm text-gray-600">Class XII Pass %</div>
-                </div>
-              </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-gray-800 mb-2">Feedback Mechanism</h4>
+              <p class="text-gray-600 text-sm">Regular feedback sessions with students and parents to discuss academic progress and areas of improvement.</p>
             </div>
           </div>
         </div>

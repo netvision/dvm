@@ -219,43 +219,7 @@
         </div>
       </div>
 
-      <!-- Grievance Committee -->
-      <div class="mb-16">
-        <h2 class="text-3xl font-bold text-blue-900 mb-8 text-center">Grievance Redressal Committee</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="text-center">
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" 
-              alt="Chairperson" 
-              class="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow-lg"
-            />
-            <h4 class="text-xl font-semibold text-blue-900">Dr. Rajesh Sharma</h4>
-            <p class="text-gray-600 mb-2">Chairperson (Principal)</p>
-            <p class="text-sm text-gray-500">M.Ed., Ph.D. in Education</p>
-          </div>
-          <div class="text-center">
-            <img 
-              src="https://images.unsplash.com/photo-1494790108755-2616c898834a?w=300&h=300&fit=crop&crop=face" 
-              alt="Member" 
-              class="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow-lg"
-            />
-            <h4 class="text-xl font-semibold text-blue-900">Mrs. Priya Agarwal</h4>
-            <p class="text-gray-600 mb-2">Member (Vice Principal)</p>
-            <p class="text-sm text-gray-500">M.A., B.Ed.</p>
-          </div>
-          <div class="text-center">
-            <img 
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" 
-              alt="Coordinator" 
-              class="w-32 h-32 mx-auto rounded-full object-cover mb-4 shadow-lg"
-            />
-            <h4 class="text-xl font-semibold text-blue-900">Mr. Amit Kumar</h4>
-            <p class="text-gray-600 mb-2">Coordinator (Senior Teacher)</p>
-            <p class="text-sm text-gray-500">M.Sc., B.Ed.</p>
-          </div>
-        </div>
-      </div>
-
+      
       <!-- Contact Information -->
       <div class="bg-gradient-to-r from-red-900 to-orange-900 text-white p-8 rounded-lg">
         <h2 class="text-3xl font-bold mb-6 text-center">Contact Grievance Cell</h2>
@@ -269,8 +233,7 @@
           <div class="text-center">
             <div class="text-4xl mb-3">📞</div>
             <h4 class="text-lg font-semibold mb-2">Phone</h4>
-            <p class="text-sm text-red-100">+91-11-2345-6789</p>
-            <p class="text-sm text-red-100">Ext: 201 (Grievance Cell)</p>
+            <p class="text-sm text-red-100">+91-1596-220602</p>
           </div>
           <div class="text-center">
             <div class="text-4xl mb-3">🕒</div>

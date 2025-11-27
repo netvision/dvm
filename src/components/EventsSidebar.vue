@@ -68,42 +68,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { CalendarDays, Clock, ArrowRight, ChevronRight } from 'lucide-vue-next'
+import cmsService, { type Event } from '../services/cms.service'
 
-// Sample events data - replace with actual API call
-const upcomingEvents = ref([
-  {
-    title: "Parent-Teacher Conference",
-    description: "Individual meetings to discuss student progress and development plans.",
-    date: "2024-03-25",
-    time: "9:00 AM"
-  },
-  {
-    title: "Inter-House Quiz Competition",
-    description: "Academic competition showcasing knowledge across various subjects.",
-    date: "2024-03-28",
-    time: "2:00 PM"
-  },
-  {
-    title: "Art & Craft Exhibition",
-    description: "Student artwork display demonstrating creativity and artistic skills.",
-    date: "2024-04-02",
-    time: "10:00 AM"
-  },
-  {
-    title: "Annual Day Celebrations",
-    description: "Grand celebration featuring cultural performances and achievements.",
-    date: "2024-04-15",
-    time: "6:00 PM"
-  },
-  {
-    title: "Summer Camp Registration",
-    description: "Enrollment opens for educational and recreational summer programs.",
-    date: "2024-04-20",
-    time: "8:00 AM"
-  }
-])
+const upcomingEvents = ref<Array<{
+  title: string
+  description: string
+  date: string
+  time: string
+  slug: string
+}>>([])
 
 // Helper functions for date formatting
 const formatDay = (dateString: string) => {
@@ -116,6 +91,42 @@ const formatMonth = (dateString: string) => {
   const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
   return months[date.getMonth()]
 }
+
+const formatTime = (startDate: string, endDate: string) => {
+  const start = new Date(startDate)
+  const end = new Date(endDate)
+  
+  const startTime = start.toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+  })
+  
+  const endTime = end.toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+  })
+  
+  return `${startTime} - ${endTime}`
+}
+
+onMounted(async () => {
+  try {
+    const response = await cmsService.getEvents({ limit: 5, upcoming: true })
+    upcomingEvents.value = response.data.map((event: Event) => ({
+      title: event.title,
+      description: event.description || '',
+      date: event.start_date,
+      time: formatTime(event.start_date, event.end_date),
+      slug: event.slug
+    }))
+  } catch (error) {
+    console.error('Error fetching events:', error)
+    // Keep empty array on error
+    upcomingEvents.value = []
+  }
+})
 </script>
 
 <style scoped>

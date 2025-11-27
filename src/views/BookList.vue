@@ -38,7 +38,6 @@
             <h3 class="text-sm font-medium text-yellow-800">Important Instructions</h3>
             <div class="mt-2 text-sm text-yellow-700">
               <ul class="list-disc pl-5 space-y-1">
-                <li>Please purchase books only from authorized dealers mentioned below</li>
                 <li>Ensure you buy the correct edition as specified in the list</li>
                 <li>Second-hand books should be in good condition with all pages intact</li>
                 <li>For any queries regarding books, contact the school office</li>
@@ -932,47 +931,7 @@
           </div>
         </section>
 
-        <!-- Authorized Book Dealers -->
-        <section class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-          <div class="bg-gradient-to-r from-teal-500 to-cyan-500 text-white p-6">
-            <h2 class="text-2xl font-bold">Authorized Book Dealers</h2>
-            <p class="text-teal-100 mt-2">Purchase books from these authorized dealers only</p>
-          </div>
-          <div class="p-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              
-              <div class="bg-teal-50 rounded-lg p-4">
-                <h3 class="text-lg font-bold text-teal-800 mb-3">Local Dealer 1</h3>
-                <div class="space-y-2 text-sm">
-                  <p><strong>Shop Name:</strong> ABC Book Store</p>
-                  <p><strong>Address:</strong> Main Market, Chirawa</p>
-                  <p><strong>Contact:</strong> +91 XXXXX XXXXX</p>
-                  <p><strong>Email:</strong> info@abcbooks.com</p>
-                </div>
-              </div>
-
-              <div class="bg-cyan-50 rounded-lg p-4">
-                <h3 class="text-lg font-bold text-cyan-800 mb-3">Local Dealer 2</h3>
-                <div class="space-y-2 text-sm">
-                  <p><strong>Shop Name:</strong> Student Corner</p>
-                  <p><strong>Address:</strong> Station Road, Chirawa</p>
-                  <p><strong>Contact:</strong> +91 XXXXX XXXXX</p>
-                  <p><strong>Email:</strong> contact@studentcorner.com</p>
-                </div>
-              </div>
-
-              <div class="bg-blue-50 rounded-lg p-4">
-                <h3 class="text-lg font-bold text-blue-800 mb-3">Online Partner</h3>
-                <div class="space-y-2 text-sm">
-                  <p><strong>Platform:</strong> Amazon/Flipkart</p>
-                  <p><strong>Discount:</strong> School Rate Available</p>
-                  <p><strong>Delivery:</strong> Free to School</p>
-                  <p><strong>Contact:</strong> School Office for Details</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
       </div>
     </div>

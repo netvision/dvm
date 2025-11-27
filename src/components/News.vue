@@ -30,7 +30,7 @@
                 <h3 class="font-bold text-lg mb-2">{{ item.title }}</h3>
                 <p class="text-gray-700 text-sm mb-3">{{ item.excerpt }}</p>
                 <router-link 
-                  :to="`/news/${item.id}`"
+                  :to="`/news/${item.slug}`"
                   class="inline-flex items-center text-blue-700 hover:text-blue-800 font-medium text-sm"
                 >
                   Read More <ArrowRight :size="14" class="ml-1" />
@@ -92,6 +92,8 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { Calendar, ArrowRight } from 'lucide-vue-next'
+import cmsService from '../services/cms.service'
+import type { NewsArticle, Event } from '../services/cms.service'
 
 interface NewsItem {
   id: number
@@ -99,6 +101,7 @@ interface NewsItem {
   date: string
   excerpt: string
   image: string
+  slug: string
 }
 
 interface EventItem {
@@ -106,83 +109,82 @@ interface EventItem {
   title: string
   date: string
   time: string
+  slug: string
 }
 
 const newsItems = ref<NewsItem[]>([])
 const events = ref<EventItem[]>([])
 const loading = ref(true)
 
-// Mock data for development (replace with actual API calls)
-const mockNewsItems: NewsItem[] = [
-  {
-    id: 1,
-    title: 'Admissions Open for 2025-26 Academic Year',
-    date: 'June 10, 2025',
-    excerpt: 'Applications are now being accepted for all classes from Nursery to Class XII for the upcoming academic year.',
-    image: 'https://pub-cdn.sider.ai/u/U01AH8KELLX/web-coder/684e997d0484c40371d10541/resource/3287fc45-4809-4e3f-84b6-8aea6ee8e9ac.jpg'
-  },
-  {
-    id: 2,
-    title: 'Annual Day Celebration: A Grand Success',
-    date: 'May 25, 2025',
-    excerpt: 'Our Annual Day celebration showcased the incredible talent of our students through various cultural performances.',
-    image: 'https://pub-cdn.sider.ai/u/U01AH8KELLX/web-coder/684e997d0484c40371d10541/resource/def72fae-755e-43d9-bef2-2c053e52f0df.jpg'
-  },
-  {
-    id: 3,
-    title: 'Sports Meet Concludes with Flying Colors',
-    date: 'April 18, 2025',
-    excerpt: 'The annual inter-house sports competition concluded with Blue House emerging as the overall champion.',
-    image: 'https://pub-cdn.sider.ai/u/U01AH8KELLX/web-coder/684e997d0484c40371d10541/resource/d2a18ac6-3060-4df6-b6d7-1e827c9887cf.jpg'
-  }
-]
+// Format date helper
+const formatDate = (dateString: string) => {
+  return new Date(dateString).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
+}
 
-const mockEvents: EventItem[] = [
-  {
-    id: 1,
-    title: 'Parent-Teacher Meeting',
-    date: 'June 25, 2025',
-    time: '10:00 AM - 1:00 PM'
-  },
-  {
-    id: 2,
-    title: 'Science Exhibition',
-    date: 'July 15, 2025',
-    time: '9:00 AM - 4:00 PM'
-  },
-  {
-    id: 3,
-    title: 'Founders Day Celebration',
-    date: 'August 5, 2025',
-    time: '10:00 AM - 2:00 PM'
-  },
-  {
-    id: 4,
-    title: 'Inter-School Debate Competition',
-    date: 'August 20, 2025',
-    time: '11:00 AM - 3:00 PM'
-  }
-]
+// Format event date/time helper
+const formatEventDateTime = (startDate: string, endDate: string) => {
+  const start = new Date(startDate)
+  const end = new Date(endDate)
+  
+  const date = start.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
+  
+  const startTime = start.toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+  })
+  
+  const endTime = end.toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+  })
+  
+  return { date, time: `${startTime} - ${endTime}` }
+}
 
 onMounted(async () => {
   try {
-    // Replace these with actual API calls
-    // const [newsRes, eventsRes] = await Promise.all([
-    //   axios.get('https://api.example.com/news'),
-    //   axios.get('https://api.example.com/events'),
-    // ])
-    // newsItems.value = newsRes.data
-    // events.value = eventsRes.data
+    // Fetch real data from API
+    const [newsRes, eventsRes] = await Promise.all([
+      cmsService.getNews({ limit: 3, status: 'published' }),
+      cmsService.getEvents({ limit: 4, upcoming: true })
+    ])
     
-    // For now, using mock data
-    await new Promise(resolve => setTimeout(resolve, 1000)) // Simulate API delay
-    newsItems.value = mockNewsItems
-    events.value = mockEvents
+    // Transform news data
+    newsItems.value = newsRes.data.map((article: NewsArticle) => ({
+      id: article.id,
+      title: article.title,
+      slug: article.slug,
+      date: formatDate(article.published_at || article.created_at),
+      excerpt: article.excerpt || article.content.substring(0, 150) + '...',
+      image: article.featured_image_url || 'https://pub-cdn.sider.ai/u/U01AH8KELLX/web-coder/684e997d0484c40371d10541/resource/3287fc45-4809-4e3f-84b6-8aea6ee8e9ac.jpg'
+    }))
+    
+    // Transform events data
+    events.value = eventsRes.data.map((event: Event) => {
+      const { date, time } = formatEventDateTime(event.start_date, event.end_date)
+      return {
+        id: event.id,
+        title: event.title,
+        slug: event.slug,
+        date,
+        time
+      }
+    })
   } catch (error) {
     console.error('Error fetching news or events:', error)
-    // Fallback to mock data on error
-    newsItems.value = mockNewsItems
-    events.value = mockEvents
+    // If API fails, keep empty arrays
+    newsItems.value = []
+    events.value = []
   } finally {
     loading.value = false
   }

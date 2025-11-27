@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import { authStore } from '../stores/auth'
 
 const routes = [
   {
@@ -33,9 +34,19 @@ const routes = [
     component: () => import('../views/News.vue')
   },
   {
+    path: '/news/:slug',
+    name: 'NewsDetail',
+    component: () => import('../views/NewsDetail.vue')
+  },
+  {
     path: '/events',
     name: 'Events',
     component: () => import('../views/Events.vue')
+  },
+  {
+    path: '/events/:slug',
+    name: 'EventDetail',
+    component: () => import('../views/EventDetail.vue')
   },
   {
     path: '/gallery',
@@ -126,6 +137,34 @@ const routes = [
     path: '/smc',
     name: 'SMC',
     component: () => import('../views/SMC.vue')
+  },
+  // Admin Routes
+  {
+    path: '/admin/login',
+    name: 'AdminLogin',
+    component: () => import('../views/admin/Login.vue')
+  },
+  {
+    path: '/admin',
+    component: () => import('../layouts/AdminLayout.vue'),
+    meta: { requiresAuth: true, requiresAdmin: true },
+    children: [
+      {
+        path: 'dashboard',
+        name: 'AdminDashboard',
+        component: () => import('../views/admin/Dashboard.vue')
+      },
+      {
+        path: 'news',
+        name: 'AdminNews',
+        component: () => import('../views/admin/AdminNews.vue')
+      },
+      {
+        path: 'events',
+        name: 'AdminEvents',
+        component: () => import('../views/admin/AdminEvents.vue')
+      }
+    ]
   }
 ]
 
@@ -139,6 +178,21 @@ const router = createRouter({
     }
     // For all other navigation, scroll to top
     return { top: 0, behavior: 'smooth' }
+  }
+})
+
+// Navigation guard
+router.beforeEach((to, _from, next) => {
+  authStore.initializeFromStorage()
+
+  if (to.meta.requiresAuth && !authStore.isAuthenticated.value) {
+    next('/admin/login')
+  } else if (to.meta.requiresAdmin && !authStore.isAdmin.value) {
+    next('/admin/login')
+  } else if (to.path === '/admin/login' && authStore.isAuthenticated.value) {
+    next('/admin/dashboard')
+  } else {
+    next()
   }
 })
 

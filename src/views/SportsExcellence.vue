@@ -205,13 +205,7 @@
                 <p class="text-xs text-gray-600 mt-1">Teamwork & communication</p>
               </div>
 
-              <div class="text-center bg-white/70 rounded-xl p-4 shadow-lg">
-                <div class="w-12 h-12 bg-teal-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span class="text-white font-bold">🏊</span>
-                </div>
-                <h3 class="font-bold text-gray-800">Swimming</h3>
-                <p class="text-xs text-gray-600 mt-1">Full-body fitness</p>
-              </div>
+              
 
               <div class="text-center bg-white/70 rounded-xl p-4 shadow-lg">
                 <div class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">

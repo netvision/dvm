@@ -136,8 +136,7 @@
                 <ul class="text-yellow-700 text-sm space-y-1">
                   <li>History</li>
                   <li>Political Science</li>
-                  <li>Geography</li>
-                  <li>Psychology</li>
+                  <li>Economics</li>
                   <li>English</li>
                 </ul>
               </div>

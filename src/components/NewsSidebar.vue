@@ -32,9 +32,14 @@
           </div>
           
           <div class="flex-1 min-w-0">
-            <h4 class="text-xs font-semibold text-gray-900 group-hover:text-blue-700 transition-colors line-clamp-2 mb-1">
-              {{ article.title }}
-            </h4>
+            <div class="flex items-center justify-between mb-1">
+              <h4 class="text-xs font-semibold text-gray-900 group-hover:text-blue-700 transition-colors line-clamp-2 flex-1">
+                {{ article.title }}
+              </h4>
+              <span v-if="article.category_name" class="ml-2 px-1.5 py-0.5 text-xs bg-blue-100 text-blue-700 rounded flex-shrink-0">
+                {{ article.category_name }}
+              </span>
+            </div>
             <p class="text-xs text-gray-600 mb-1 line-clamp-1">
               {{ article.excerpt }}
             </p>
@@ -64,37 +69,43 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { Newspaper, Calendar, ArrowRight, ChevronRight } from 'lucide-vue-next'
+import cmsService, { type NewsArticle } from '../services/cms.service'
 
-// Sample news data - replace with actual API call
-const latestNews = ref([
-  {
-    title: "CBSE Board Results 2024-25 Declared",
-    excerpt: "Our students achieve exceptional results with 98% pass rate and multiple distinctions.",
-    date: "March 15, 2024"
-  },
-  {
-    title: "New AV Room for Interactive Learning",
-    excerpt: "State-of-the-art audio-visual facility enables remote interactive teaching sessions.",
-    date: "March 10, 2024"
-  },
-  {
-    title: "Annual Sports Day Celebration",
-    excerpt: "Students showcase athletic excellence in various sporting events and competitions.",
-    date: "March 5, 2024"
-  },
-  {
-    title: "Science Exhibition Success",
-    excerpt: "Young scientists present innovative projects demonstrating STEAM education principles.",
-    date: "February 28, 2024"
-  },
-  {
-    title: "Teacher Training Workshop",
-    excerpt: "Faculty participates in advanced pedagogical training for conceptual learning methods.",
-    date: "February 20, 2024"
+const latestNews = ref<Array<{
+  title: string
+  excerpt: string
+  date: string
+  slug: string
+  category_name?: string | null
+}>>([])
+
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString)
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
+}
+
+onMounted(async () => {
+  try {
+    const response = await cmsService.getNews({ limit: 5, status: 'published' })
+    latestNews.value = response.data.map((article: NewsArticle) => ({
+      title: article.title,
+      excerpt: article.excerpt || article.content.substring(0, 100) + '...',
+      date: formatDate(article.published_at || article.created_at),
+      slug: article.slug,
+      category_name: article.category_name
+    }))
+  } catch (error) {
+    console.error('Error fetching news:', error)
+    // Keep empty array on error
+    latestNews.value = []
   }
-])
+})
 </script>
 
 <style scoped>
